@@ -4,6 +4,7 @@ using System.Data;
 using UiPath.CodedWorkflows;
 using UiPath.Core;
 using UiPath.Core.Activities.Storage;
+using UiPath.MicrosoftOffice365.Activities.Api;
 using UiPath.Orchestrator.Client.Models;
 using UiPath.Testing;
 using UiPath.Testing.Activities.TestData;
@@ -19,8 +20,10 @@ namespace REF_GenerateYearlyReportDispatcher
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Core.Activities.API.ISystemService)};
+            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Core.Activities.API.ISystemService)};
         }
+
+        protected UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService office365 { get => serviceContainer.Resolve<UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService>() ; }
 
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>() ; }
 
