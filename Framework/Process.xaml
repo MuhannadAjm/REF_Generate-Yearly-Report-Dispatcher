@@ -112,7 +112,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="411.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[CurrentPageAlreadyOpen]" sap:VirtualizedContainerService.HintSize="411.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:UiElementExists DisplayName="Element Exists Page" Exists="[CurrentPageAlreadyOpen]" sap:VirtualizedContainerService.HintSize="411.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ca24f01-e222-4b95-b3b2-d86514b82220" InformativeScreenshot="172f4dcc6c1aff9e6dd046ee01002a94" Selector="[string.Format(&quot;&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;&lt;webctrl tag='A' class='page-numbers current' innertext='{0}' /&gt;&quot;, in_TransactionItem)]">
           <ui:Target.TimeoutMS>
@@ -138,32 +138,27 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="System1\System1_ ScrapeDataTable.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="System1\System1_ ScrapeDataTable.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="System1_ ScrapeDataTable.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="System1\System1_ ScrapeDataTable.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DataTable">[dt_WorkItems]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="System1\System1_ FilterWIDataTable.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="System1\System1_ FilterWIDataTable.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="System1_ FilterWIDataTable.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="System1\System1_ FilterWIDataTable.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_Type">
                 <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Type&quot;).ToString" />
               </InArgument>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DataTable">
-                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_WorkItems" />
-              </InArgument>
-              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_FilteredDataTable">
-                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_WorkItems" />
-              </OutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_Status">
                 <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Status&quot;).ToString" />
               </InArgument>
+              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_DataTable">
+                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_WorkItems" />
+              </InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PopulateQueue.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="PopulateQueue.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_Type">
-                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_WorkItems" />
-              </InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_Type">[dt_WorkItems]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Already on the correct page for transaction &quot; + in_TransactionItem.ToString]" />
