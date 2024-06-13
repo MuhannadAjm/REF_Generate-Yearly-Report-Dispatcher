@@ -96,7 +96,6 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dt_FilteredWorkItems&Sequence_1",
         "dt_WorkItems&Sequence_1",
         "CurrentPageAlreadyOpen&Sequence_1"
       ],
@@ -189,8 +188,6 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_QueueName",
-        "in_QueueFolderPath",
         "in_Type"
       ],
       "ConstantsSectionElementsOrder": [],
