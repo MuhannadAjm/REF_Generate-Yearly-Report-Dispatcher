@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1319.2,890.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1219.2,624.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1__NavigateTo_WI_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -75,7 +75,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser ACME'" sap:VirtualizedContainerService.HintSize="483.2,344.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="6e8db54d31b007ca9009c5c9402720d5" Selector="&lt;html app='msedge.exe' title='ACME System 1 - *' url='https://acme-test.uipath.com/*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser ACME" sap:VirtualizedContainerService.HintSize="483.2,344.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="6e8db54d31b007ca9009c5c9402720d5" Selector="&lt;html app='msedge.exe' title='ACME System 1 - *' url='https://acme-test.uipath.com/*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

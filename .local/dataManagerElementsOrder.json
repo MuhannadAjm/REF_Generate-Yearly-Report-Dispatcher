@@ -145,9 +145,8 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "io_DataTable",
         "in_Type",
-        "in_DataTable",
-        "out_FilteredDataTable",
         "in_Status"
       ],
       "ConstantsSectionElementsOrder": [],

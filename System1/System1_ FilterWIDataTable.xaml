@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1219.2,890.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1219.2,624.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1__FilterWIDataTable_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -94,12 +94,13 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1__FilterWIDataTable" sap:VirtualizedContainerService.HintSize="449.6,274.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1__FilterWIDataTable" sap:VirtualizedContainerService.HintSize="449.6,456.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;System1_ FilterWIDataTable&quot;]" />
     <ui:FilterDataTable DataTable="[io_DataTable]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[io_DataTable]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
